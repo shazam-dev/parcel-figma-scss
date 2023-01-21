@@ -1,0 +1,21 @@
+{
+  "name": "SCSS_Figma_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "cssnano": "^5.1.14",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.21"
+  }
+}

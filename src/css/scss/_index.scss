@@ -1,0 +1,569 @@
+/* Header styles start */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s all;
+    z-index: 999;
+
+    &_active{
+        background-color: #0E1D28;
+        
+    }
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 56px 0 40px 0;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin-right: 82px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    
+    &__link{
+        font-size: $link-font_size;
+        line-height: 24px;
+        color: white;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active{
+            opacity: .75;
+        }
+    }
+    &__wrapp-burger {
+        display: none;
+        cursor: pointer;
+
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      /* Rotate first bar */
+      .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+      /* Fade out the second bar */
+      .change .bar2 {opacity: 0;}
+      
+      /* Rotate last bar */
+      .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
+    
+
+}
+/* Header styles end */
+
+
+
+/* Intro styles start */
+
+.intro{
+    height: 100vh;
+    background: url(../../img/intro-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+    padding-bottom: 223px;
+
+    h1{
+        max-width: 620px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: $h1-font_size;
+        line-height: 60px;
+        color: aliceblue;
+        margin-bottom: 22px;
+    }
+    &__p-desc{
+        max-width: 546px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        margin-bottom: 22px;
+    }
+    .search-form{
+        &__info{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 890px;
+        }
+        &__field{
+            border: 0;
+            background: transparent url("../../img/svg/Oval.svg") no-repeat left 5px;
+            background-size: 20px;
+            padding: 10px 30px 25px 40px;
+            border-bottom: 1px solid #FFFFFF;
+            margin-right: 10px;
+
+            &::placeholder{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+        }
+        
+        &__submit{
+            background-color: #1B7DFF;
+            border: 0;
+            text-transform: uppercase;
+            padding: 15px 40px 15px 40px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #FFFFFF;
+            margin-top: 15px;
+        }
+    }
+}
+
+/* Intro styles end */
+
+
+
+
+
+
+
+
+/* benefit start */
+
+.benefits{
+    &__wrapper{
+        position: relative;
+        max-width: 1060px;
+        margin: 0 auto;
+        /* height: 100px; */
+        background-color: #FFFFFF;
+    }
+
+    &__title{
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 50px ;
+        line-height: 35px;
+        font-size: $h2-font_size;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        transform: translate(0, -100%);
+    }
+    &__content{
+        max-width: 90%;
+        margin: 0 auto;
+        column-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 150px;
+        justify-content: space-between;
+
+    }
+    &__items{
+        grid-column: span 1;
+    }
+    .benefit{
+        &__wrapp-pic{
+            margin-bottom: 20px;
+        }
+        &__image{
+            
+
+        }
+        &__sub-title{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+
+            /* identical to box height, or 133% */
+
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        &__description{
+            margin-bottom: 25px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+            color: #000000;
+        }
+        &__more{
+            @include more_link 
+        }
+        
+    }
+
+}
+
+/* BENEFIT END */
+
+
+
+
+
+
+
+
+/* INSPIRED START */
+.inspired{
+    margin-bottom: 140px; 
+
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;    
+        padding: 10px 0;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: $h2-font_size;
+        line-height: 42px;
+
+        /* identical to box height */
+        position: relative;
+        color: #102746;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 0;
+            width: 50%;
+            border: 0;
+            border-bottom: 1px solid #102746;
+    
+        }
+    }
+    &__view-all{
+        @include more_link
+    }
+
+    .show{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+        position: relative;
+        
+    
+        &__wrap-pic{
+            position: relative;
+            overflow: hidden;
+        }
+        &__wrap-pic--two-coll{
+            grid-column: span 3;
+        }
+        &__wrap-pic--three-coll{
+            grid-column: span 2;
+        }
+        &__pic{
+            width: 100%;
+            transition: .2s all;
+        }
+        &__wrap-pic{
+            &:hover .show__pic{
+                transform: scale(1.05)
+            }
+        }
+        &__title{
+            position: absolute;
+            left: 10px;
+            top: 65%;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60px;
+
+            /* identical to box height */
+
+            color: #FFFFFF;
+        }
+        &__wrap-pic a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+        }
+        &__wrap-pic::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(21, 24, 36, 0.4);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/* INSPIRED END */
+
+
+
+
+
+
+
+/* FOCUS START */
+
+.focus{
+    margin-bottom: 140px;
+
+    &__wrapper{
+
+    }
+    &__card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 80px;
+        column-gap: 50px;
+        justify-content: space-between;
+    }
+
+        .card{
+        &__item{
+            grid-column: span 1;
+        }
+        &__item--text{
+            padding: 10px;
+        }
+        &__pic{
+            width: 100%;
+
+        }
+        &__title{
+            font-weight: 500;
+            font-size: $h2-font_size;
+            line-height: 40px;
+            color: #102746;
+            margin-bottom: 35px;
+            margin-top: 30px;
+        }
+        &__desc{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #102746;
+            margin-bottom: 35px;
+
+        }
+        &__more{
+            @include more_link
+        }
+
+    }
+}
+
+/* FOCUS END */
+
+
+
+
+
+
+
+
+/* PLACES START */
+
+.places{
+    margin-bottom: 140px;
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;    
+        padding: 10px 0;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: $h2-font_size;
+        line-height: 42px;
+
+        /* identical to box height */
+        position: relative;
+        color: #102746;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 0;
+            width: 50%;
+            border: 0;
+            border-bottom: 1px solid #102746;
+    
+        }
+    }
+    &__view-all{
+        @include more_link
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); // 2 is a number of potential columns
+        row-gap: 40px;
+        column-gap: 40px;
+
+        &__item{
+            grid-column: span 2; // 1 is a width of column
+        }
+
+        &__pic{
+            width: 100%;
+
+        }
+        &__wrapp-pic{
+            position: relative;
+            margin-bottom: 50px;
+        }
+        &__icons-wrapp{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(83, 90, 93, 0.5);
+            
+            p{
+                color: #FFFFFF;
+                
+            }
+        }
+        &__icon-1{
+            @include icon-social{
+                background-image: url("../../img/svg/Shape_pic.svg");
+            }
+        }
+        &__icon-2{
+            @include icon-social{
+                background-image: url("../../img/svg/Shape_places-2.svg");
+            }
+        }
+        &__desc{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+        &__more{
+            @include more_link-2
+        }
+    }
+
+}
+
+/* PLACES END */
+
+
+
+
+
+
+
+/* VIDEOS START */
+
+.videos{
+    
+    &__wrapper{
+        max-width: 1340px;
+        margin: 0 auto;
+    }
+    &__container{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+    &__responsive-iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* VIDEOS END */
+
+
+
+
+
+
+
+/* FOOTER START */
+.footer{
+    background-color: #0E1D28;
+
+    &__wrapper{
+        margin: 0 auto;
+        max-width: 1060px;
+        padding: 180px 20px;
+
+    }
+    &__flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu{
+        .footer__item{
+            margin-right: 40px;
+            margin-bottom: 30px;
+        }
+        &__menu-lists{
+            width: 50%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__item{
+            color: #FFFFFF;
+        }
+        &__item-title{
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        &__item{
+
+        }
+    }
+}
+
+
+/* FOOTER END */
+
